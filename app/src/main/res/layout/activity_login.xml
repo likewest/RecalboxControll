@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="103dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/logo_recalbox"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/logo_recallbox"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_weight="1"
+        android:text="Enter IP to login or select the latest IP"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignLeft="@+id/IP"
+        android:layout_alignStart="@+id/IP"/>
+
+    <EditText
+        android:id="@+id/IP"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:hint="Enter IP here"
+        android:inputType="phone"
+        android:singleLine="false"
+        android:layout_below="@+id/Latest_IP"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"/>
+
+    <Button
+        android:id="@+id/Latest_IP"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_login"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/holo_green_light"
+        android:text="Latest IP"/>
+
+    <Button
+        android:id="@+id/Enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/IP"
+        android:layout_alignLeft="@+id/Latest_IP"
+        android:layout_alignStart="@+id/Latest_IP"
+        android:background="@color/colorPrimaryDark"
+        android:text="Enter"
+        android:textColor="@android:color/background_light"/>
+
+</RelativeLayout>
